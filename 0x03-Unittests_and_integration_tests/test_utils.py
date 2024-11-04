@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Familiarize yourself with the utils.access_nested_map function and understand
 its purpose. Play with it in the Python console to make sure you understand.
