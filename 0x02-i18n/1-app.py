@@ -21,7 +21,7 @@ from flask import Flask, render_template
 
 class Config:
     """APPlication configuration class."""
-    LANGUAGES = ["en", "es", "fr"]
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
@@ -34,8 +34,7 @@ babel = Babel(app)
 @app.route('/')
 def index_page():
     """Returns a welcome page"""
-    render_template(
-            'index.html', title="Welcome to Holberton", header="Hello world")
+    render_template('index.html')
 
 
 if __name__ == "__main__":
