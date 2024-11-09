@@ -15,7 +15,7 @@ app = Flask(__name__)
 def index_page():
     """Returns a welcome page"""
     render_template(
-        'index.html', title="Welcome to Holberton", header="Hello world")
+        '0-index.html', title="Welcome to Holberton", header="Hello world")
 
 
 if __name__ == "__main__":
