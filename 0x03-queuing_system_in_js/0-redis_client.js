@@ -1,6 +1,6 @@
 // Module connects to a Redis server running on localhost
 
-import { createClient } from redis;
+import { createClient } from 'redis';
 
 const client = createClient({
   url: 'redis://127.0.0.1:6379'
