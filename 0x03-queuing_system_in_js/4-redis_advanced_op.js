@@ -15,42 +15,42 @@ client.on('error', (err) => {
 });
 
 // Use callback operations
-client.hset('HolbertonSchools', 'Portland', '50', (err, reply) => {
+client.hset('alx', 'Portland', '50', (err, reply) => {
   if (err) {
     console.error(err);
   } else {
     console.log(`Reply: ${reply}`);
   }
 });
-client.hset('HolbertonSchools', 'Seattle', '80', (err, reply) => {
+client.hset('alx', 'Seattle', '80', (err, reply) => {
   if (err) {
     console.error(err);
   } else {
     console.log(`Reply: ${reply}`);
   }
 });
-client.hset('HolbertonSchools', 'New York', '20', (err, reply) => {
+client.hset('alx', 'New York', '20', (err, reply) => {
   if (err) {
     console.error(err);
   } else {
     console.log(`Reply: ${reply}`);
   }
 });
-client.hset('HolbertonSchools', 'Bogota', '20', (err, reply) => {
+client.hset('alx', 'Bogota', '20', (err, reply) => {
   if (err) {
     console.error(err);
   } else {
     console.log(`Reply: ${reply}`);
   }
 });
-client.hset('HolbertonSchools', 'Cali', '40', (err, reply) => {
+client.hset('alx', 'Cali', '40', (err, reply) => {
   if (err) {
     console.error(err);
   } else {
     console.log(`Reply: ${reply}`);
   }
 });
-client.hset('HolbertonSchools', 'Paris', '2', (err, reply) => {
+client.hset('alx', 'Paris', '2', (err, reply) => {
   if (err) {
     console.error(err);
   } else {
@@ -60,7 +60,7 @@ client.hset('HolbertonSchools', 'Paris', '2', (err, reply) => {
 
 
 // Display the entire hash
-client.hgetall('HolbertonSchools', (err, obj) => {
+client.hgetall('alx', (err, obj) => {
   if (err) {
     console.error(err)
   } else {
