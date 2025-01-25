@@ -14,15 +14,17 @@ client.on('error', (err) => {
   console.log(`Redis client not connected to the server: ${err}`);
 });
 
+// Promisify the 'set' method
+const setAsync = promisify(client.set).bind(client);
+
 // function set value
-function setNewSchool(schoolName, value) {
-  client.set(schoolName, value, (err, reply) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log(`Reply: ${reply}`);
-    }
-  });
+async function setNewSchool(schoolName, value) {
+  try {
+    const reply = await setAsync(schoolName, value);
+    console.log(`Reply: ${reply}`);
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 // Convert a callback based to promised based function
@@ -39,6 +41,6 @@ async function displaySchoolValue(schoolName) {
 }
 
 // function calls
-displaySchoolValue('Holberton');
-setNewSchool('HolbertonSanFrancisco', '100');
-displaySchoolValue('HolbertonSanFrancisco');
+displaySchoolValue('ALX');
+setNewSchool('ALXSanFrancisco', '100');
+displaySchoolValue('ALXSanFrancisco');
